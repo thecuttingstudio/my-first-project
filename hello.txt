@@ -1,0 +1,67 @@
+Hi everyone !!!
+Welcome to thecuttingstudio
+
+i have written my code just basic
+Kids Cooking Recepie
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Cooking Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #FF5733;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kids Cooking Game</h1>
+    <p>Click the button below to get a random cooking task or ingredient:</p>
+    <button id="generateButton">Generate</button>
+    <p id="output"></p>
+
+    <script>
+        // List of cooking tasks or ingredients
+        const cookingItems = [
+            "Make a peanut butter and jelly sandwich",
+            "Bake chocolate chip cookies",
+            "Peel and slice a banana",
+            "Mix pancake batter",
+            "Chop vegetables for a salad",
+            "Boil water for pasta",
+            "Make a fruit smoothie",
+            "Whisk eggs for an omelette",
+        ];
+
+        // Function to generate a random cooking task or ingredient
+        function generateRandomItem() {
+            const randomIndex = Math.floor(Math.random() * cookingItems.length);
+            return cookingItems[randomIndex];
+        }
+
+        // Event listener for the button click
+        const generateButton = document.getElementById("generateButton");
+        generateButton.addEventListener("click", function () {
+            const output = document.getElementById("output");
+            const randomItem = generateRandomItem();
+            output.textContent = "Your task: " + randomItem;
+        });
+    </script>
+</body>
+</html>
+  
+
+Tell me if there is any mistake !!
